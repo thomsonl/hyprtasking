@@ -4,8 +4,7 @@
 </div>
 
 > [!Important]
-> - Supports Hyprland releases `v0.46.2` through `v0.54.3`, `v0.55.3`
->   through `v0.55.4`, and `v0.56.0`.
+> - Supports Hyprland releases `v0.46.2`-`v0.56.1`.
 
 https://github.com/user-attachments/assets/8d6cdfd2-2b17-4240-a117-1dbd2231ed4e
 
