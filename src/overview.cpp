@@ -108,9 +108,9 @@ void HTView::hide(bool exit_on_mouse, std::optional<WORKSPACEID> target_workspac
         return;
 
     if (target_workspace.has_value()) {
-        PHLWORKSPACE workspace = g_pCompositor->getWorkspaceByID(*target_workspace);
+        PHLWORKSPACE workspace = State::workspaceState()->query().id(*target_workspace).run();
         if (workspace == nullptr && *target_workspace != WORKSPACE_INVALID)
-            workspace = g_pCompositor->createNewWorkspace(*target_workspace, monitor->m_id);
+            workspace = State::workspaceState()->create(*target_workspace, monitor->m_id);
         if (workspace == nullptr)
             return;
         monitor->changeWorkspace(workspace);
